@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Day Forecast</title>
+    <link rel="stylesheet" href="./Assets/css/styles.css">
+</head>
+<body>
+   
+    <header>
+        <h1>Weather Forecast</h1>
+    </header>
+
+
+    <main class="container">
+        <!--Search & History -->
+        <aside class="sidebar">
+
+            <div class="search-section">
+                <h2>Search for your city below:</h2>
+                <form id="search-form">
+                <input
+                    type="text"
+                    id="city-input"
+                    class="city-search"
+                    placeholder="Enter city name here..."
+                    autocomplete="off"
+                    required
+                />
+                <button type="submit" id="search-btn">Search
+                </button>
+                </form>
+                <div class="temp-toggle-button">
+                    <button type="button" id="temp-toggle" class="temp-toggle-btn">
+                       Switch to °C 
+                    </button>
+                </div>
+
+                <div class="geolocation-container">
+                    <button type="buton" id="geo-btn">
+                   📍 Use My Location
+
+                    </button>
+                </div>
+            </div>
+            <!--History-->
+            <div class="history-section">
+                <div id="history-container">
+
+              </div>
+            </div>
+
+        </aside>
+
+        <!--Weather Display -->
+        <section class="weather-content">
+            <!--current weather-->
+            <div class="current-weather-card" id="current-weather">
+
+
+            </div>
+        </section>
+            <!-- 5-day forecast -->
+             <section id="forecast-section" class="forecast-section">
+                <h3 class="five-day">5-Day Forecast:</h3>
+                <container id="forecast-container" class="forecast-container">
+
+           </container>
+        </section>
+    
+        <aside class="picture-sidebar">
+            <div id="picture-container">
+                <img src="./Assets/images/wo-weather.gif" alt="dance for the weather" class="sidebar-image">
+                <img src="./Assets/images/pudgy-rain.gif" alt="raining penguin" class="sidebar-image">
+                <img src="./Assets/images/yep-anime.gif"  alt="Caught in the rain" class="sidebar-image">
+            </div>
+        </aside>
+
+    </main>
+   
+ 
+
+
+<footer>
+    <div class="footer-content">
+        <img src="./Assets/images/Gonzo-codes-logo.svg" alt="Gonzo code's logo" class="footer-logo">
+        <p class="gonzo-copyright">Created by Gonzo Codes &copy;</p>
+
+    </div>    
+</footer>
+    <img src="./Assets/images/chibi-pointing.png" alt="chibi-pointing at forecast" class="chibi-pointing">
+    <script src="./Assets/js/config.js"></script>
+    <script src="./Assets/js/script.js"></script>
+
+</body>
+</html>
