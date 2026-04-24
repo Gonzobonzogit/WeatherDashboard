@@ -1,8 +1,7 @@
 //API Utilities
 
 
-const weather_API_URL = 'https://api.openweathermap.org/data/2.5/forecast';
-const GEO_API_URL = 'https://geocode.maps.co/search';
+const PROXY_URL = "https://weatherDash.onrender.com";
 let currentUnit = 'imperial';
 let currentWeatherData = null;
 
@@ -110,7 +109,7 @@ function showLoadingSpinner() {
 //GeoCoding Funcition
 
 function getCoordinates(cityName) {
-    const url = `${GEO_API_URL}?q=${encodeURIComponent(cityName)}&api_key=${GEO_KEY}`;
+    const url = `${PROXY_URL}/geocode?q=${encodeURIComponent(cityName)}`;
 
     fetch(url)
         .then(response => {
@@ -140,7 +139,7 @@ function getCoordinates(cityName) {
 //Grabbing the forecast
 
 function getWeather(lat, lon, cityName) {
-    const url = `${weather_API_URL}?lat=${lat}&lon=${lon}&units=imperial&appid=${API_KEY}`;
+    const url = `${PROXY_URL}/weather?lat=${lat}&lon=${lon}`;
 
     fetch(url)
         .then(response =>{
@@ -250,7 +249,7 @@ function saveToHistory(cityName) {
 
     history.unshift(cityName);
 
-    if (history > 8) {
+    if (history.length > 8) {
         history = history.slice(0, 8);
     }
 
