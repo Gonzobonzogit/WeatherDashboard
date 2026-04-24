@@ -1,0 +1,2 @@
+const API_KEY = 'KEYS_GOES_HERE';
+const GEO_KEY = 'KEYS_GOES_HERE';
